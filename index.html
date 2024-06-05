@@ -4,7 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPTV File Download</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .download-section {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .download-button {
+            background: #ff5f6d;
+            background: linear-gradient(to right, #ff9966, #ff5f6d);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .download-button:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,6 +100,22 @@
     <footer>
         <p>&copy; 2024 IPTV Service. All rights reserved.</p>
     </footer>
-    <script src="javascript/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const downloadButton = document.querySelector('.download-button');
+
+            downloadButton.addEventListener('click', () => {
+                downloadButton.textContent = 'Downloading...';
+                downloadButton.classList.add('downloading');
+
+                // Simulate a file download process
+                setTimeout(() => {
+                    downloadButton.textContent = 'Download Now';
+                    downloadButton.classList.remove('downloading');
+                    alert('Download Started!');
+                }, 3000); // 3 seconds delay to simulate download time
+            });
+        });
+    </script>
 </body>
 </html>
