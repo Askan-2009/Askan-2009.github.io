@@ -3,135 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV File Download</title>
+    <title>TAMIL LIVE CHANNELS M3U 2024</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4e54c8, #8f94fb);
-            color: #fff; 
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 20px 0;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            animation: fadeInDown 1s ease-in-out;
-        }
-        html {
-            height: 100%;
-            margin: 0;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f0f0; /* Optional: background color for better visibility */
-        }
-
-        .logo-container {
-            width: 200px;  /* Adjust the size as needed */
-            height: 200px; /* Adjust the size as needed *
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;  /* Makes the image circular */
-            object-fit: cover;   /* Ensures the image covers the container */
-        }
-
-        main {
+            font-family: 'Roboto', sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
-        #copyButton {
-  background-color: orangered;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#copyButton:hover {
-  background-color: #orange
-}
-        
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            flex-direction: column;
+            align-items: center; /* Center align content horizontally */
+            justify-content: center; /* Center align content vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            background: linear-gradient(135deg, #87CEEB, #FF6347); /* Sky blue to red gradient */
+            overflow: auto; /* Enable scrolling */
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #f5f5f5 #333333; /* Firefox */
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
+        /* WebKit Scrollbar */
+        body::-webkit-scrollbar {
+            width: 8px; /* Width of the scrollbar */
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #f5f5f5; /* Track color */
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #333333; /* Thumb color */
+            border: 2px solid #f5f5f5; /* Thumb border */
+            border-radius: 10px; /* Thumb border radius */
+        }
+
+        .header-container,
+        .guide {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 90%; /* 90% width of the viewport */
+            max-width: 600px; /* Maximum width for content */
+            text-align: center; /* Center align text */
+            margin: 1rem; /* Margin around containers */
+        }
+
+        .header-container {
+            margin-top: 2rem; /* Larger top margin for header */
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 40px);
+            padding: 0.8rem;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ff7e5f;
+            box-shadow: 0 0 8px rgba(255, 126, 95, 0.6);
+        }
+
+        .copy-button {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            background-color: #ff7e5f;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .copy-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .copy-button:active {
+            transform: translateY(1px);
+        }
+
+        #copy-success {
+            color: green;
+            font-weight: bold;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .guide h2 {
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .guide p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .guide ul {
+            text-align: left;
+            margin-left: 2rem;
+        }
+
+        .guide li {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Styling for the visible but non-selectable text */
+        .non-selectable-text {
+            display: inline-block;
+            user-select: none;
+            pointer-events: none;
+            color: #333; /* Text color */
+            font-weight: 700; /* Font weight */
+            font-size: 1.2rem; /* Font size */
+            margin-bottom: 1rem; /* Bottom margin */
+        }
+
+        @media (max-width: 600px) {
+            .header-container {
+                padding: 1.5rem;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            input[type="text"] {
+                width: calc(100% - 30px);
+            }
+
+            .guide {
+                padding: 1rem;
+            }
+
+            .guide h2 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .guide p,
+            .guide li {
+                font-size: 0.85rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h3>NEWS TAMIL 24*7 IPTV M3U</h1>
-    </header>
-    <main>
-        <section class="download-section">
-            <div class="logo-container">
-        <img src="https://static.wikia.nocookie.net/logopedia/images/7/78/News_Tamil_24x7.png" alt="Logo" class="logo">
-            </div>
-            <h1>Get Your M3U LINK</h2>
-            <button id="copyButton" onclick="copyToClipboard('https://raw.githubusercontent.com/AKIL-2/Akil-2.github.io/Main/Index.M3U')">Copy Link</button>
-        </section>
-    </main>
+    <div class="header-container">
+        <div class="input-group">
+            <!-- Use span for non-selectable text -->
+            <span class="non-selectable-text" id="m3u-description">200+ Live Channels</span>
+            <input type="text" id="m3u-link" value="https://raw.githubusercontent.com/Askan-2009/IPTV-TAMIL/main/TAMIL-IPTV.m3u" readonly>
+        </div>
+        <button class="copy-button" id="copy-button">Copy Link</button>
+        <p id="copy-success" class="hidden">Link copied to clipboard!</p>
+    </div>
+    <div class="guide">
+        <h2>TAMIL LIVE CHANNELS M3U 2024</h2>
+        <p>Follow these steps to watch live channels using M3U links on your Android device:</p>
+        <ul>
+            <li>Install an M3U player app from the Google Play Store (e.g., OTT Navigator, IPTV).</li>
+            <li>Open the player app and navigate to the settings or options menu.</li>
+            <li>Select 'Add Playlist' or 'Add M3U URL' option.</li>
+            <li>Enter the M3U link provided above: <br><strong>https://raw.githubusercontent.com/Askan-2009/IPTV-TAMIL/main/TAMIL-IPTV.m3u</strong></li>
+            <li>Save the playlist and wait for the channels to load.</li>
+            <li>Enjoy watching your favorite Tamil live channels!</li>
+        </ul>
+    </div>
     <script>
-function copyToClipboard(link) {
-  // Create a temporary input element
-  var tempInput = document.createElement("input");
-  tempInput.value = link;
-  document.body.appendChild(tempInput);
-  
-  // Select the text in the input element
-  tempInput.select();
-  tempInput.setSelectionRange(0, 99999); // For mobile devices
-  
-  // Copy the selected text to the clipboard
-  document.execCommand("copy");
-  
-  // Remove the temporary input element
-  document.body.removeChild(tempInput);
-  
-  // Change button text to indicate link has been copied
-  var copyButton = document.getElementById("copyButton");
-  copyButton.innerHTML = "Link Copied";
-  
-  // Revert button text after 2 seconds
-  setTimeout(function() {
-    copyButton.innerHTML = "Copy Link";
-  }, 2000); // 2000 milliseconds = 2 seconds
-}
+        document.getElementById('copy-button').addEventListener('click', function() {
+            const m3uLink = document.getElementById('m3u-link');
+            m3uLink.select();
+            m3uLink.setSelectionRange(0, 99999); // For mobile devices
+
+            try {
+                document.execCommand('copy');
+                showSuccessMessage();
+                updateText();
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
+        });
+
+        function showSuccessMessage() {
+            const successMessage = document.getElementById('copy-success');
+            successMessage.classList.remove('hidden');
+            
+            // Smooth fade-out animation after 2 seconds
+            setTimeout(() => {
+                successMessage.style.opacity = '0';
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                    successMessage.style.opacity = '1'; // Reset opacity
+                }, 1000); // Wait for animation to complete (1 second)
+            }, 2000); // Show message for 2 seconds
+        }
+
+        function updateText() {
+            const m3uLink = document.getElementById('m3u-link');
+            const m3uDescription = document.getElementById('m3u-description');
+            m3uLink.value = 'https://raw.githubusercontent.com/Askan-2009/IPTV-TAMIL/main/TAMIL-IPTV.m3u'; // Ensure URL is unchanged
+            m3uDescription.textContent = '200+ Live Channels'; // Update visible text
+        }
     </script>
 </body>
 </html>
