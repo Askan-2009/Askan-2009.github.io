@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAMIL LIVE CHANNELS M3U 2024</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
         body {
             font-family: 'Roboto', sans-serif;
@@ -15,7 +16,7 @@
             justify-content: center; /* Center align content vertically */
             height: 100vh; /* Full viewport height */
             margin: 0;
-            background: linear-gradient(135deg, #87CEEB, #FF6347); /* Sky blue to red gradient */
+            background: #000000; /* Black background */
             overflow: auto; /* Enable scrolling */
             scrollbar-width: thin; /* Firefox */
             scrollbar-color: #f5f5f5 #333333; /* Firefox */
@@ -27,21 +28,21 @@
         }
 
         body::-webkit-scrollbar-track {
-            background-color: #f5f5f5; /* Track color */
+            background-color: #333333; /* Track color */
         }
 
         body::-webkit-scrollbar-thumb {
-            background-color: #333333; /* Thumb color */
-            border: 2px solid #f5f5f5; /* Thumb border */
+            background-color: #f5f5f5; /* Thumb color */
+            border: 2px solid #333333; /* Thumb border */
             border-radius: 10px; /* Thumb border radius */
         }
 
         .header-container,
         .guide {
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            background: rgba(255, 0, 0, 0.9); /* Semi-transparent red background */
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
             width: 90%; /* 90% width of the viewport */
             max-width: 600px; /* Maximum width for content */
             text-align: center; /* Center align text */
@@ -59,33 +60,38 @@
         input[type="text"] {
             width: calc(100% - 40px);
             padding: 0.8rem;
-            border: 2px solid #ccc;
+            border: 2px solid #ff0000; /* Red border */
             border-radius: 10px;
             outline: none;
             font-size: 1rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
+            transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
             box-sizing: border-box;
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text */
         }
 
         input[type="text"]:focus {
-            border-color: #ff7e5f;
-            box-shadow: 0 0 8px rgba(255, 126, 95, 0.6);
+            border-color: #ff4500; /* Lighter red border on focus */
+            box-shadow: 0 0 8px rgba(255, 69, 0, 0.6); /* Lighter red shadow on focus */
+            background-color: #1a1a1a; /* Darker background on focus */
         }
 
         .copy-button {
             padding: 0.8rem 1.5rem;
             border: none;
-            background-color: #ff7e5f;
+            background-color: #ff0000; /* Red background */
             color: white;
             cursor: pointer;
             border-radius: 10px;
             font-size: 1rem;
             font-weight: 700;
             letter-spacing: 1px;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .copy-button:hover {
             transform: translateY(-3px);
+            background-color: #ff4500; /* Lighter red on hover */
         }
 
         .copy-button:active {
@@ -103,16 +109,21 @@
         }
 
         .guide h2 {
-            color: #333;
+            color: #ffffff; /* White text */
+            font-family: 'Poppins', sans-serif; /* Use Poppins font */
             font-weight: 700;
             margin-bottom: 1rem;
+            animation: fadeIn 2s ease-in-out;
         }
 
-        .guide p {
-            color: #666;
+        .guide p,
+        .guide li {
+            color: #ffffff; /* White text */
+            font-family: 'Raleway', sans-serif; /* Use Raleway font */
             font-size: 0.9rem;
             line-height: 1.6;
             text-align: left;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .guide ul {
@@ -120,10 +131,14 @@
             margin-left: 2rem;
         }
 
-        .guide li {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.6;
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         /* Styling for the visible but non-selectable text */
@@ -131,10 +146,11 @@
             display: inline-block;
             user-select: none;
             pointer-events: none;
-            color: #333; /* Text color */
+            color: #ffffff; /* White text */
             font-weight: 700; /* Font weight */
             font-size: 1.2rem; /* Font size */
             margin-bottom: 1rem; /* Bottom margin */
+            animation: fadeIn 2s ease-in-out;
         }
 
         @media (max-width: 600px) {
@@ -179,7 +195,7 @@
             <li>Install an M3U player app from the Google Play Store (e.g., OTT Navigator, IPTV).</li>
             <li>Open the player app and navigate to the settings or options menu.</li>
             <li>Select 'Add Playlist' or 'Add M3U URL' option.</li>
-            <li>Enter the M3U link provided above: <br><strong>https://raw.githubusercontent.com/Askan-2009/IPTV-TAMIL/main/TAMIL-IPTV.m3u</strong></li>
+            <li>Enter the M3U link provided Above.</strong></li>
             <li>Save the playlist and wait for the channels to load.</li>
             <li>Enjoy watching your favorite Tamil live channels!</li>
         </ul>
