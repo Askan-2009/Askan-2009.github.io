@@ -1,0 +1,5 @@
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://www.bigcric.site/bigcchubchat/keys.php?show_id=114&key
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 
+#EXTINF:-1 tvg-id=tatasky_114 tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-1356-j5tdnwmw-v1/imageContent-1356-j5tdnwmw-m1.png" group-title="TATA PLAY ▶ |  Kids",Disney
+https://playlist.kratosgod.io/api/114.mpd
